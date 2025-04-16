@@ -1,71 +1,35 @@
-Service Smart:
+Project: Personal AI Assistant
+- Goal: Build a chatbot that can answer questions from personal notes using LLMs.
+- Stack: Python, FAISS, sentence-transformers, OpenAI/Ollama
+- Status: MVP ready, tested with DeepSeek-Coder and Mistral
 
-App to  user/Website with similar capabilities
+Meeting Notes - March 10
+- Discussed embedding strategies: chunk size should be 300–500 tokens
+- Need to evaluate local inference speed vs OpenAI latency
+- Set target for GUI prototype by end of next week
 
-1.Enter Vehicle Registration Number ,Model
-2.Enter problems (usual problems should be suggested based on vehicle model)
-3.Estimate should be provided with payment option as well
-4.Book the service
+Todo List
+- [x] Add config.yaml for model switching
+- [x] Make local and remote LLMs pluggable
+- [ ] Test PDF support
+- [ ] Add Whisper integration for voice input
 
-App to Service Centre mechanic/vehicle picker
+Tech Notes
+- FAISS is used for fast nearest-neighbor search in embedding space
+- SentenceTransformers like 'all-MiniLM-L6-v2' are lightweight and fast
+- Ollama makes it easy to run models like Llama2 or DeepSeek locally
+- OpenAI GPT-3.5 is faster but less private compared to local LLMs
 
-1.scan or enter vehicle number when picking up the vehicle - to confirm whether he does the advance booking/to look into problems/ scan or enter dashboard to enter KMS driven value 
-2.Start service option when he started working on it so that it can be update to the customer.
-3.Check boxes to click what all problems are fixed
-4.Complete servicing -- message to user to pick the bike 
+Personal Goals
+- Learn LangChain and RAG in more depth
+- Build a Chrome extension version of the assistant
+- Explore use cases for therapists and journaling
 
-DB
+Useful Prompts
+- "Summarize my goals from the past month."
+- "What's the status of the AI assistant project?"
+- "Remind me of embedding size recommendations."
 
-1.Vehicle model details
-2.With all the available service times /30days - 200 days etc
-3.Cost of all the spare parts including the fixed labor charges -to provide exact estimate
-4.BookedServices
-5.Available Spare Parts 
-
-Server Methods
-1.FillVehicle,FillProblems,ProvideEstimate,BookService,FillSpareParts
-2.PickVehicle,StartService,
-
-
-Cook Me :
-
-
-Cook me is a box with all the ingredients required to cook an item like potato fry, kaju mushroom with steps to follow
-
-Cooking is good and enjoyable if all the heavy lifting things like cleaning , peeling chopping are removed. People love to cook at home on their convenient time using their preferred oil, salt and karam preferences.
-
-Advantages: 
-	1. All the items are chopped and correct portions will be given so you can simply follow the instructions and cook with your own oil at your own time 
-	2. This will be freezer supported and will have best before date.
-	3. The box sizes can be varying - serves 2 people , serves 4 people.
-	4. Will be placed in all the retails stores and online portals (can be a specific app also if needed).
-
-Target People:
-	1. Working group people or even regular house wives if it is made affordable 
-
-Things to be explored:
-	1. Items best b Drefore - individually like 
-		onion chopped - best before date
-		Potato peeled - best before date
-		Bendi chopped - best before date
-		Similarly for all the items so that we can determine the best before date for the combined cook me box based on items involved 
-	2. How to avoid wastage - 
-		a. same items can be picked from the retails stores day before the expiry dates and have connections with restaurants and hotels so we can supply them these at a lower price point.
-		b. Sell at 50% discount if it is going to expiry in 2 days to actual users.
-
-Implementation Strategy
-
-Things  to perform :
-	1. Procurement 
-	2. Storage
-	3. Cleaning, Peeling, Chopping  and storage
-	4. Packing 
-	5. Tracking 
-	6. Supply 
-
-
-Future Enhancements:
-	1. Bring regional specials - Gongura mutton, Punjabi dal tadka
-	2. Collaborate with famous cooking channels to introduce different items easier to cook requires less ingredients and more like these.
-
-
+Research Ideas
+- Use LLMs to help process dream journals or therapy notes
+- Compare RAG pipelines: Haystack vs LangChain vs custom Python

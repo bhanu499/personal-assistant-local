@@ -21,7 +21,7 @@ This is a simple yet powerful **personal assistant chatbot** that can answer que
 ## 🧱 Project Structure
 
 ```
-my-chatbot/
+personal-assistant-local/
 ├── main.py                     # Main CLI chatbot
 ├── config.yaml                 # Backend + model config
 ├── notes/
@@ -49,8 +49,8 @@ my-chatbot/
 ### 2. 📦 Install Dependencies
 
 ```bash
-git clone https://github.com/your-username/my-chatbot.git
-cd my-chatbot
+git clone https://github.com/bhanu499/personal-assistant-local.git
+cd personal-assistant-local
 pip install -r requirements.txt
 ```
 
@@ -171,4 +171,4 @@ Feel free to open issues or pull requests if you want to add:
 
 ---
 
-> Created with 💡 by [Banu Saladi]
+> Created by [Banu Saladi]
