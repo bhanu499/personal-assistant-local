@@ -1,0 +1,4 @@
+llm_backend: local  # or 'local'
+openai_api_key: "sk-..."
+local_llm_url: "http://localhost:11434"  # for ollama/lmstudio
+local_llm_model: "deepseek-r1:1.5b"
